@@ -1,0 +1,389 @@
+@use '../base/' as *;
+
+@media screen and (min-width: 1025px) {
+    // Navigacija
+    .navbar {
+
+        &-brand {
+            width: 200px;
+    
+            img {
+                width: 200px;
+            }
+        }
+
+        .navigacija__link {
+            color: white;
+        }
+
+        &-item {
+            padding-left: 0.75rem;
+        }
+    }
+
+    // Video Carousel
+    .videos {
+        &__slider__wrapper {
+            height: 700px;
+            overflow: hidden;
+            width: 100vw;
+        }
+
+        &__video__wrapper {
+            justify-content: center;
+            overflow: hidden;
+            width: 900px;
+
+            video {
+                max-width: none;
+            }
+        }
+
+        &__video__wrapper:first-child {
+            left: calc(-900px + ((100vw - 900px) / 2));
+        }
+        &__video__wrapper:nth-child(2) {
+            left: calc((100vw - 900px) / 2);
+        }
+        &__video__wrapper:nth-child(3) {
+            left: calc((100vw - 900px) / 2  + 900px);
+        }
+        &__video__wrapper:nth-child(4) {
+            left: calc((100vw - 900px) / 2  + 1800px);
+        }
+        &__video__wrapper:nth-child(5) {
+            left: calc((100vw - 900px) / 2  + 2700px);
+        }
+
+        &__overlay__wrapper {
+            display: flex;
+            height: 800px;
+
+            .title {
+                font-size: 100px;
+            }
+        }
+
+        &__overlay:first-child {
+            position: static;
+            margin-top: 150px;
+            height: 100%;
+    
+            img {
+                height: 100%;
+                width: 500px;
+            }
+        }
+    
+        &__overlay:last-child {
+            position: static;
+            height: 100%;
+            z-index: 8;
+
+            img {
+                width: 500px;
+            }
+        }
+
+        &__overlay__title {
+            width: 900px;
+        }
+
+        &__overlay i {
+            left: 10px;
+            top: 155px;
+        }
+    }
+    
+    // Kokice Section 1
+    .kokice {
+
+        &__wrapper {
+            &--lijevo {
+                padding-top: 25vh;
+
+                .kokica__container--1, .kokica__container--2 {
+                    height: 4.5vw;
+                    width: 4.5vw;
+                }
+            }
+            
+            &--desno{
+                padding: 3vw;
+
+                h3 {
+                    font-size: 70px;
+                }
+            }
+        }
+    }
+
+    
+    // Razlozi za KlasikTV
+    .razlozi {
+        &__heading__wrapper {
+            margin-top: 70px;
+            
+            h3 {
+                font-size: 70px;
+            }
+        }
+
+        &__logo {
+            padding: 0 0 1vw 2vw;
+            width: 25vw;
+        }
+
+        &__slider__wrapper {
+            height: 700px;
+            margin-top: 70px;
+            width: 100vw;
+
+            h6 {
+                font-size: 55px;
+                line-height: 1.2;
+            }
+        }
+
+        &__slider__item {
+            width: 865px;
+        }
+    }
+
+    // Zašto volimo KlasikTV
+    #zasto-volimo {
+        .divider__red {
+            height: 70px;
+            margin-top: 12vw;
+        }
+    }
+
+    .zasto {
+        &__header {
+            padding: 10vh 0 10vh 0;
+    
+            h2 {
+                font-size: 3.2vw;
+
+                
+                &::before {
+                    left: 6vw;
+                }
+            }
+
+            &__left, &__right {
+                flex: 50%;
+            }
+        }
+
+        &__clanak {
+            height: 33vw;
+            margin: 2.5vw 5vw 2.5vw 20vw;
+            padding: 2.5vw 2.5vw 2.5vw 1.8vw;
+            width: 60vw;
+
+            &__tekst {
+                
+                h5 {
+                    font-family: 'PT Sans Narrow', sans-serif;
+                    font-size: 3.25vw;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+
+    #sto-gledamo {
+    
+        .kokice__wrapper {
+        
+            &--lijevo {
+                flex: 40%;
+            }
+            
+            &--desno {
+                flex: 60%;
+            }
+        }
+
+        .gledamo__links {
+            padding: 0;
+
+            &__wrapper {
+                display: flex;
+                flex-wrap: nowrap;
+                margin: 3vw auto;
+                width: 100%;
+            }
+    
+            &__column {
+                background: url('../img/filmska-traka-crvena-vert.svg') no-repeat center center / contain;
+                flex: 1;
+                height: 21vw;
+                margin: 1vw;
+                padding: 4vw;
+                width: 20%;
+
+            }
+    
+            h6 {
+                color: white;
+                font-family: 'Palette Mosaic', sans-serif;
+                font-size: 2vh;
+                line-height: 1.4;
+                text-align: center;
+            }
+        }
+
+        .gledamo__parni {
+            background: url('../img/film-grain-white-01.svg') no-repeat left top / contain, 
+            url('../img/background-Parni-valjak_CB@3x.jpg') no-repeat center center / cover;
+        }
+    }
+
+    // Glumci za sva vremena
+    #glumci {
+        background: url('../img/lijeva-filmska-traka-01.svg') no-repeat 0% 5% / 30%,
+                    url('../img/mala-filmska-traka.svg') no-repeat 40% 10% / 10%;
+        padding-top: 15vh;
+        
+        .glumci {
+            &__wrapper {
+                justify-content: space-between;
+            }
+            
+            &__heading {
+                height: 50vh;
+                margin: 5vw 10vw 5vw 0;
+                width: 42vh;
+
+                h2 {
+                    color: white;
+                    font-family: 'Palette Mosaic', sans-serif;
+                    font-size: 4.5vh;
+                    height: 35.8vw;
+                    line-height: 1.4;
+                    padding: 10vh 9vh;
+                    text-align: center;
+                }
+            }
+
+            &__osoba {
+                flex-direction: row-reverse;
+                max-width: 600px;
+                
+                width: 48%;
+
+                &:not(:nth-child(2)) {
+                    margin: 0 0 5vw 0;
+                }
+
+                // Boris Dvornik
+                &:nth-child(2) {
+                    margin: -8vw 0 0 -15vw;
+                }
+
+                // Mira Furlan
+                &:nth-child(3) {
+                    margin-top: -15vw;
+                    order: 4;
+                }
+
+                // Milena Dravić
+                &:nth-child(4) {
+                    flex-direction: row;
+                    order: 3;
+                }
+
+                // Bora Todorović
+                &:nth-child(5) {
+                    align-items: flex-end;
+                    flex-direction: column-reverse;
+                    margin: -11.5vw 0 0 0;
+                    order: 6;
+                }
+
+                // Mustafa Nadarević
+                &:nth-child(6) {
+                    flex-direction: row;
+                    order: 5;
+                }
+            }
+
+            &__ime {
+                margin: 10px;
+            }
+
+            &__slika {
+                height: auto;
+                margin-bottom: 10px;
+                padding: 30px;
+                width: 300px;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    font-family: 'Righteous', sans-serif;
+                    font-size: 18px;
+                    line-height: 1.2;
+                    margin-right: 0;
+                    padding-top: 12px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    // Postani dio Klasik obitelji
+    #klasik-obitelj {
+        .section {
+            margin-bottom: 5vh;
+        }
+
+        .klasik-obitelj__social {
+            margin-bottom: 7vh;
+        }
+        
+        .section {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            padding: 5vh 0 10vh;
+        }
+
+        h2 {
+            font-family: 'Palette Mosaic', sans-serif;
+            font-size: 3.2vw;
+        }
+    }
+
+    // Footer
+footer {
+    .traka--crna {
+        height: 8.75vw;
+        
+        a {
+            line-height: 1;
+        }
+    }
+
+    .traka--crvena {
+        height: 3.43vw;
+    }
+
+    .logo__wrapper {
+
+        .footer__klasikTV-logo {
+            height: 3vw;
+            margin-right: 15px;
+        }
+
+        .footer__AMZ-logo {
+            height: 4vw;
+            margin-left: 15px;
+        }
+    }
+}
+}

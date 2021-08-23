@@ -1,0 +1,104 @@
+@use 'colors' as *;
+@use 'bulma' as *;
+
+html, body {
+    position:relative;
+    overflow-x:hidden;
+  }
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: $charcoal;
+}
+
+@media screen and (max-width: 301px){
+    html {
+        min-width: 100vw;
+    }
+}
+
+/* Bob */
+@-webkit-keyframes hvr-bob {
+    0% {
+      -webkit-transform: translateY(-4vh);
+      transform: translateY(-4vh);
+    }
+    50% {
+      -webkit-transform: translateY(-2vh);
+      transform: translateY(-2vh);
+    }
+    100% {
+      -webkit-transform: translateY(-4vh);
+      transform: translateY(-4vh);
+    }
+  }
+  @keyframes hvr-bob {
+    0% {
+      -webkit-transform: translateY(-4vh);
+      transform: translateY(-4vh);
+    }
+    50% {
+      -webkit-transform: translateY(-2vh);
+      transform: translateY(-2vh);
+    }
+    100% {
+      -webkit-transform: translateY(-4vh);
+      transform: translateY(-4vh);
+    }
+  }
+  @-webkit-keyframes hvr-bob-float {
+    100% {
+      -webkit-transform: translateY(-4vh);
+      transform: translateY(-4vh);
+    }
+  }
+  @keyframes hvr-bob-float {
+    100% {
+      -webkit-transform: translateY(-4vh);
+      transform: translateY(-4vh);
+    }
+  }
+  .hvr-bob {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
+    -webkit-animation-name: hvr-bob-float, hvr-bob;
+    animation-name: hvr-bob-float, hvr-bob;
+    -webkit-animation-duration: .3s, 1.5s;
+    animation-duration: .3s, 1.5s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
+  }
+
+/* Photo Twist */
+@keyframes photoTwist {
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(-8deg);}
+    50%  {transform: rotate(4deg);}
+    100% {transform: skew(0deg);}
+}
+
+.photo-twist {
+
+    &:hover {
+        animation: photoTwist 1.5s cubic-bezier( 0.445, 0.05, 0.55, 0.95 ) infinite;
+    }
+}

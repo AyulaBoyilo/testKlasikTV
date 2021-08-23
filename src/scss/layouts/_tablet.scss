@@ -1,0 +1,371 @@
+@use '../base/' as *;
+
+@media screen and (min-width: 540px) {
+    // Navigacija
+    .navbar {
+        max-width: 100vw;
+        
+        &-item {
+            padding-left: 4vw;
+        }
+    }
+    
+    .navbar-brand {
+        width: inherit;
+    }
+    
+    // Video Carousel
+    .videos {
+        
+        &__slider__wrapper {
+            height: 400px;
+        }
+
+        &__video__wrapper {
+            width: 530px;
+        }
+
+        &__video__wrapper:first-child {
+            left: calc(-530px + ((100vw - 530px) / 2));
+        }
+        &__video__wrapper:nth-child(2) {
+            left: calc((100vw - 530px) / 2);
+        }
+        &__video__wrapper:nth-child(3) {
+            left: calc((100vw - 530px) / 2  + 530px);
+        }
+        &__video__wrapper:nth-child(4) {
+            left: calc((100vw - 530px) / 2  + 1060px);
+        }
+        &__video__wrapper:nth-child(5) {
+            left: calc((100vw - 530px) / 2  + 1590px);
+        }
+
+        &__overlay__wrapper {
+            display: flex;
+            height: 500px;
+
+            .title {
+                font-size: 8vw;
+            }
+        }
+
+        &__overlay:first-child {
+            position: static;
+    
+            img {
+                height: 100%;
+                width: 45vw;
+            }
+        }
+    
+        &__overlay:last-child {
+            position: static;
+
+            img {
+                width: 45vw;
+            }
+        }
+
+        &__overlay i {
+            left: 10px;
+            top: 150px;
+        }
+    }
+
+    // Kokice Section 1
+    .kokice {
+
+        &__wrapper {
+            
+            &--desno{
+                background: url('../img/film-grain-black-01.svg') no-repeat bottom center /contain;
+                padding: 20px;
+
+                img {
+                    width: 100%;
+                }
+
+                h3 {
+                    font-size: 4vw;
+                }
+            }
+        }
+    }
+
+    // Razlozi za KlasikTV
+    .razlozi {
+        &__heading__wrapper {
+            
+            h3 {
+                font-size: 5.5vw;
+            }
+        }
+
+        &__logo {
+            padding: 0 0 1vw 2.6vw;
+        }
+
+        &__slider__wrapper {
+            height: 37.63vw;
+            width: 90vw;
+
+            h6 {
+                font-size: 18px;
+            }
+        }
+
+        &__slider__item {
+            width: 45%;
+        }
+    }
+
+    // Zašto volimo KlasikTV
+    #zasto-volimo {
+        position: relative;
+
+        .divider__red {
+            height: 6vw;
+            margin-top: 100px;
+        }
+    }
+
+    .zasto {
+
+        &__filmska-traka--velika {
+            display: inline-block;
+            left: 0;
+            position: absolute;
+            top: 30vh;
+            width: 30vw;
+        }
+
+        &__header {
+            padding-top: 5vh;
+            padding-bottom: 7vh;
+    
+            h2 {
+                font-size: 3.5vw;
+
+                &::before {
+                    left: 6.7vw;
+                }
+            }
+        }
+
+        &__clanak {
+            height: 33vw;
+            margin: 2.5vw 5vw 2.5vw 20vw;
+            padding: 2.5vw 2.5vw 2.5vw 1.8vw;
+            width: 60vw;
+
+            &__tekst {
+                
+                h5 {
+                    font-family: 'PT Sans Narrow', sans-serif;
+                    font-size: 21px;
+                    line-height: 1.2;
+                }
+            }
+
+            &::before {
+                background-color: $cherry-red;
+                content: '';
+                display: inline;
+                left: -5vw;
+                height: 33vw;
+                position: relative;
+                top: -2.5vw;
+                width: 1.5vw;
+            }
+        }
+
+        &__clanci__wrapper {
+            &::after {
+                content: url(../img/lijeva-filmska-traka-01.svg);
+                display: inline;
+                height: 7vw;
+                left: 0;
+                position: absolute;
+                bottom: 40vh;
+                width: 17vw;
+            }
+        }
+    }
+
+    #sto-gledamo {
+    
+        
+        .kokice__wrapper {
+        
+            &--lijevo {
+                flex: 45%;
+            }
+            
+            &--desno {
+                flex: 55%;
+            }
+        }
+
+        .gledamo__links {
+            &__wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 3vw auto;
+                width: 85vw;
+            }
+    
+            &__column {
+                background: url('../img/filmska-traka-crvena-vert.svg') no-repeat center center / contain;
+                flex: 45%;
+                height: 46vw;
+                margin: 2vw;
+                padding: 7vw;
+            }
+    
+            h6 {
+                color: white;
+                font-family: 'Palette Mosaic', sans-serif;
+                font-size: 2.7vw;
+                line-height: 1.4;
+                text-align: center;
+            }
+        }
+
+        .gledamo__parni {
+            background: url('../img/film-grain-white-01.svg') no-repeat left center / contain,
+                    url('../img/background-Parni-valjak_CB@2x.jpg') no-repeat center center / cover;
+        }
+    }
+
+    // Glumci za sva vremena
+    #glumci {
+        .section {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .glumci {
+            &__wrapper {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                width: 85vw;  
+            }
+            
+            &__heading {
+                background: url('../img/filmska-traka-crvena-vert.svg') no-repeat center center / cover;
+                height: 49.5vw;
+                margin: 5vw 15vw 5vw 0;
+                width: 42vw;
+
+                h2 {
+                    color: white;
+                    font-family: 'Palette Mosaic', sans-serif;
+                    font-size: 3.9vw;
+                    height: 35.8vw;
+                    line-height: 1.4;
+                    padding: 10vw 12vw;
+                    text-align: center;
+                }
+            }
+
+            &__osoba {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 30vw;
+
+                &:not(:nth-child(2)) {
+                    margin: 0 0 5vw 5vw;
+                }
+
+                &:nth-child(2) {
+                    margin-left: -15vw;
+                }
+            }
+
+            &__ime {
+                // color: white;
+                font-family: 'Righteous', sans-serif;
+                font-size: 2.5vw;
+                line-height: 1.2;
+                text-align: center;
+                width: 15vw;
+            }
+
+            &__slika {
+                height: 37vw;
+                margin-bottom: 10px;
+                padding: 4vw 4vw 5vw 4vw;
+            }
+        }
+    }
+
+    // Postani dio Klasik obitelji
+    #klasik-obitelj {
+        
+        .section {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            padding: 5vw 0 10vw;
+        }
+
+        h2 {
+            font-family: 'Palette Mosaic', sans-serif;
+            font-size: 3.9vw;
+        }
+
+        .klasik-obitelj {
+
+            &__social {
+                
+                h3 {
+                    font-size: 5vw;
+                    margin-right: 2vw;
+                }
+
+                &__icons {
+
+                    .facebook {
+                        margin: 0 10px 0 10px;
+                    }
+
+                    .youtube {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Footer
+    footer {
+        .traka--crna {
+
+            a {
+                line-height: 1;
+            }
+        }
+    }
+}
+
+// iPad Pro
+@media screen and (min-width: 1020px) and (max-width: 1024px) {
+    .navbar {
+        .navigacija__link {
+            color: white;
+        }
+    }
+
+    .kokice__wrapper {
+    
+        &--lijevo {
+            padding-top: 12vh;
+        }
+    }
+}
